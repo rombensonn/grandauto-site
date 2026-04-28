@@ -3,6 +3,7 @@
 import { CalendarCheck, Send, Wrench } from "lucide-react";
 import { FormEvent, useState } from "react";
 import { preferredTimeOptions } from "@/content/site";
+import { withBasePath } from "@/lib/paths";
 import type { LeadFieldErrors } from "@/lib/validation";
 
 type SubmitState = "idle" | "loading" | "success" | "error";
@@ -193,8 +194,8 @@ export function LeadForm() {
         />
         <span>
           Даю согласие на обработку персональных данных и принимаю{" "}
-          <a href="/privacy">Политику конфиденциальности</a> и{" "}
-          <a href="/personal-data-consent">Согласие на обработку персональных данных</a>.
+          <a href={withBasePath("/privacy")}>Политику конфиденциальности</a> и{" "}
+          <a href={withBasePath("/personal-data-consent")}>Согласие на обработку персональных данных</a>.
         </span>
       </label>
       {fieldErrors.personalDataConsent ? (

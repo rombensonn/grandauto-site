@@ -48,6 +48,7 @@ import {
   trustCards,
   visualAssets
 } from "@/content/site";
+import { withBasePath } from "@/lib/paths";
 import { typograph as tx } from "@/lib/typography";
 
 function CtaLink({
@@ -56,7 +57,7 @@ function CtaLink({
   variant = "primary"
 }: Readonly<{ href: string; children: React.ReactNode; variant?: "primary" | "secondary" | "ghost" }>) {
   return (
-    <a className={`button button--${variant}`} href={href}>
+    <a className={`button button--${variant}`} href={withBasePath(href)}>
       {children}
     </a>
   );
@@ -546,7 +547,7 @@ export default function Page() {
                 <ul className="footer-link-list">
                   {footerDocumentLinks.map(([label, href]) => (
                     <li key={href}>
-                      <a href={href}>
+                      <a href={withBasePath(href)}>
                         <FileText size={16} aria-hidden="true" />
                         {tx(label)}
                       </a>
@@ -574,7 +575,7 @@ export default function Page() {
               <ul className="footer-link-list">
                 {footerServiceLinks.map(([label, href]) => (
                   <li key={href}>
-                    <a href={href}>{tx(label)}</a>
+                    <a href={withBasePath(href)}>{tx(label)}</a>
                   </li>
                 ))}
               </ul>
@@ -584,7 +585,7 @@ export default function Page() {
               <ul className="footer-link-list">
                 {footerDocumentLinks.map(([label, href]) => (
                   <li key={href}>
-                    <a href={href}>{tx(label)}</a>
+                    <a href={withBasePath(href)}>{tx(label)}</a>
                   </li>
                 ))}
               </ul>
@@ -653,7 +654,7 @@ export default function Page() {
             <p>© 2026 Грант Авто. Все права защищены</p>
             <div className="footer-bottom__links">
               {footerDocumentLinks.slice(0, 3).map(([label, href]) => (
-                <a href={href} key={href}>{tx(label)}</a>
+                <a href={withBasePath(href)} key={href}>{tx(label)}</a>
               ))}
             </div>
             <p className="footer-disclaimer">

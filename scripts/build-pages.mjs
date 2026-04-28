@@ -32,6 +32,7 @@ const result = spawnSync(process.execPath, [nextBin, "build"], {
   cwd: root,
   env: {
     ...process.env,
+    NEXT_PUBLIC_GITHUB_PAGES_BASE_PATH: process.env.NEXT_PUBLIC_GITHUB_PAGES_BASE_PATH ?? "/grandauto-site",
     NEXT_PUBLIC_STATIC_FORM_FALLBACK: "true"
   },
   stdio: "inherit"
