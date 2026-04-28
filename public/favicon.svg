@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Грант Авто">
+  <rect width="64" height="64" rx="10" fill="#090b0e"/>
+  <path d="M10 42V22h18v6H17v8h11v6H10Zm22 0 9-20h7l9 20h-7l-1.5-4h-8L39 42h-7Zm10.5-9h4L44.5 28l-2 5Z" fill="#f7f7f5"/>
+  <path d="M10 50h44" stroke="#f04423" stroke-width="5" stroke-linecap="round"/>
+</svg>
