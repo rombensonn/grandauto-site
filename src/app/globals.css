@@ -1110,9 +1110,23 @@ blockquote {
   padding: 20px;
 }
 
+.process-list h3 {
+  max-width: 12ch;
+  font-size: clamp(16px, 1.12vw, 18px);
+  line-height: 1.18;
+  overflow-wrap: normal;
+  text-wrap: balance;
+}
+
+.process-list p {
+  max-width: 22ch;
+  font-size: clamp(14px, 1vw, 16px);
+  line-height: 1.55;
+}
+
 .process-list span {
   display: inline-flex;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
   color: var(--accent);
   font-weight: 900;
   font-variant-numeric: tabular-nums;
@@ -2039,6 +2053,19 @@ blockquote {
 
   .price-category-card p {
     min-height: 0;
+  }
+
+  .process-list li {
+    padding: 18px;
+  }
+
+  .process-list h3,
+  .process-list p {
+    max-width: 100%;
+  }
+
+  .process-list h3 {
+    font-size: clamp(17px, 5vw, 20px);
   }
 
   .review-trust {
